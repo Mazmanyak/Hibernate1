@@ -36,17 +36,6 @@ public class UserDaoJDBCImpl implements UserDao {
         }
     }
 
-//    @Override
-//    public void saveUser(String name, String lastName, byte age) {
-//        String query = "insert into users (name, last_name, age) value('" + name + "', '" + lastName + "', " + age + ")";
-//
-//        try (Connection connection = Util.getConnection()) {
-//            connection.prepareStatement(query).executeUpdate();
-//        } catch (SQLException e) {
-//            System.out.println("user не создан: " + e.getMessage());
-//        }
-//    }
-
     @Override
     public void saveUser(String name, String lastName, byte age) {
 
@@ -73,16 +62,6 @@ public class UserDaoJDBCImpl implements UserDao {
             System.out.println("user не удалена по id: " + id + "\n" + e.getMessage());
         }
     }
-
-//    @Override
-//    public void removeUserById(long id) {
-//        String query = "DELETE from users where id = " + id;
-//        try (Connection connection = Util.getConnection()) {
-//            connection.prepareStatement(query).executeUpdate();
-//        } catch (SQLException e) {
-//            System.out.println("user не удалена по id: " + id + "\n" + e.getMessage());
-//        }
-//    }
 
     @Override
     public List<User> getAllUsers() {
