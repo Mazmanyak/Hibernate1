@@ -15,9 +15,9 @@ public class Util {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
-            System.out.println("нет подключения к БД");
+            System.out.println("нет подключения к БД\n" + e.getMessage());
         }
-            return connection;
+        return connection;
     }
 
 }
