@@ -23,6 +23,12 @@ public class User {
 
     }
 
+    public User(String name, String lastName, Byte age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,12 +40,6 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, lastName, age);
-    }
-
-    public User(String name, String lastName, Byte age) {
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
     }
 
     public Long getId() {
