@@ -17,8 +17,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     public void createUsersTable() {
-        String query = "CREATE TABLE users (id int AUTO_INCREMENT PRIMARY KEY," +
-                "name VARCHAR(45) NOT NULL,last_name VARCHAR(45),age TINYINT)";
+        String query = "CREATE TABLE users (id int AUTO_INCREMENT PRIMARY KEY," + "name VARCHAR(45) NOT NULL,last_name VARCHAR(45),age TINYINT)";
         try (Statement stmt = connection.createStatement()) {
             stmt.executeUpdate(query);
         } catch (SQLException e) {
